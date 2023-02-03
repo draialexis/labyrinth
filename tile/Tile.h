@@ -8,14 +8,28 @@
 
 #include "../position/Position.h"
 
+enum type {
+    EMPTY,
+    WALL
+};
+
 class Tile
 {
 private:
     Position m_pos;
+    type m_type;
+
 public:
+    explicit Tile(Position pos, type type);
+
     const Position &pos() const;
+    type getType() const;
+
+    bool traversable();
 
 };
+
+
 
 
 #endif //LABYRINTH_TILE_H
