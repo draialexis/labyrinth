@@ -14,6 +14,8 @@ private:
     int m_x_pos, m_y_pos;
 public:
     explicit Position(int x_pos, int y_pos);
+    Position& operator+=(const Position& rhs);
+    friend Position operator+(Position lhs, const Position& rhs);
     friend std::ostream& operator<<(std::ostream& os, const Position& pos);
 };
 
