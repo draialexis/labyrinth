@@ -15,6 +15,10 @@ private:
 public:
     explicit Position(int x_pos, int y_pos);
 
+    const int &x_pos() const;
+
+    const int &y_pos() const;
+
     bool operator==(const Position &rhs) const;
 
     bool operator!=(const Position &rhs) const;

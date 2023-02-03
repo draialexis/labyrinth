@@ -39,3 +39,13 @@ bool Position::operator!=(const Position &rhs) const
 {
     return !(*this == rhs);
 }
+
+const int &Position::x_pos() const
+{
+    return m_x_pos;
+}
+
+const int &Position::y_pos() const
+{
+    return m_y_pos;
+}
