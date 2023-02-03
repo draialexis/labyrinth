@@ -1,0 +1,21 @@
+//
+// Created by draia on 03/02/23.
+//
+
+#ifndef LABYRINTH_POSITION_H
+#define LABYRINTH_POSITION_H
+
+#include <iostream>
+
+
+class Position final
+{
+private:
+    int m_x_pos, m_y_pos;
+public:
+    explicit Position(int x_pos, int y_pos);
+    friend std::ostream& operator<<(std::ostream& os, const Position& pos);
+};
+
+
+#endif //LABYRINTH_POSITION_H

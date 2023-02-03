@@ -3,4 +3,4 @@ project(labyrinth)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(labyrinth main.cpp)
+add_executable(labyrinth main.cpp position/Position.cpp position/Position.h)
