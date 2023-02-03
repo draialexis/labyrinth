@@ -18,8 +18,8 @@ std::ostream &operator<<(ostream &os, const Position &pos)
 
 Position &Position::operator+=(const Position &rhs)
 {
-    this->m_x_pos += rhs.m_x_pos;
-    this->m_y_pos += rhs.m_y_pos;
+    m_x_pos += rhs.m_x_pos;
+    m_y_pos += rhs.m_y_pos;
     return *this;
 }
 
@@ -27,4 +27,15 @@ Position operator+(Position lhs, const Position &rhs)
 {
     lhs += rhs;
     return lhs;
+}
+
+bool Position::operator==(const Position &rhs) const
+{
+    return m_x_pos == rhs.m_x_pos
+           && m_y_pos == rhs.m_y_pos;
+}
+
+bool Position::operator!=(const Position &rhs) const
+{
+    return !(*this == rhs);
 }

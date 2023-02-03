@@ -16,5 +16,13 @@ int main()
     p1 += p2;
     cout << p1 << endl;
 
+    cout << (p1 == p2) << endl;
+    cout << (p1 != p2) << endl;
+
+    p1 = Position(4, 1);
+
+    cout << (p1 == p2) << endl;
+    cout << (p1 != p2) << endl;
+
     return 0;
 }
