@@ -25,7 +25,7 @@ public:
 
     Position &operator+=(const Position &rhs);
 
-    friend Position operator+(Position lhs, const Position &rhs);
+    Position &operator+(const Position &rhs);
 
     friend std::ostream &operator<<(std::ostream &os, const Position &pos);
 };

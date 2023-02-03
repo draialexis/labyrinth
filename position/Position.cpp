@@ -23,10 +23,10 @@ Position &Position::operator+=(const Position &rhs)
     return *this;
 }
 
-Position operator+(Position lhs, const Position &rhs)
+Position &Position::operator+(const Position &rhs)
 {
-    lhs += rhs;
-    return lhs;
+    *this += rhs;
+    return *this;
 }
 
 bool Position::operator==(const Position &rhs) const
