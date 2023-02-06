@@ -1,8 +1,12 @@
 #include <iostream>
 #include "position/Position.h"
 #include "tile/Tile.h"
+#include "labyrinth/Labyrinth.h"
 
 using namespace std;
+
+#define ROWS 30
+#define COLS 30
 
 int main()
 {
@@ -38,7 +42,7 @@ int main()
 
     auto t2 = Tile(p2, WALL);
 
-    cout << t2.pos() << " -- type: " << t2.getType() << " -- traversable?: " << t2.traversable() << endl;
+    cout << t2.pos() << " -- type: " << t2.getType() << " -- traversable?: " << t2.traversable() << endl << endl;
 
     /*
      * lack of flexibility in dynamic memory management for Tiles. If we don't know the number of tiles at compile-time,
@@ -51,5 +55,22 @@ int main()
      * practice that
      */
 
+    /////////////////////////////
+    /// labyrinth
+    /////////////////////////////
+
+    auto lab = new Labyrinth(ROWS, COLS);
+
+    for (int i = 0; i < ROWS; ++i)
+    {
+        for (int j = 0; j < COLS; ++j)
+        {
+            auto pos = Position(i, j);
+            cout << ((*lab)[pos]->traversable() ? "□" : "▨") << "  ";
+        }
+        cout << endl;
+    }
+
+    delete lab;
     return 0;
 }

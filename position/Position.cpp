@@ -49,3 +49,10 @@ const int &Position::y_pos() const
 {
     return m_y_pos;
 }
+
+bool Position::operator<(const Position &rhs) const
+{
+    return m_x_pos < rhs.m_x_pos
+           || ((m_x_pos == rhs.m_x_pos)
+               && (m_y_pos < rhs.m_y_pos));
+}
