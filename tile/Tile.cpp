@@ -13,7 +13,7 @@ Tile::Tile(Position pos, enum type type)
         : m_pos(pos), m_type(type)
 {}
 
-type Tile::getType() const
+const type Tile::getType() const
 {
     return m_type;
 }

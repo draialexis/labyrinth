@@ -8,7 +8,8 @@
 
 #include "../position/Position.h"
 
-enum type {
+enum type
+{
     EMPTY,
     WALL
 };
@@ -23,13 +24,12 @@ public:
     explicit Tile(Position pos, type type);
 
     const Position &pos() const;
-    type getType() const;
+
+    const type getType() const;
 
     bool traversable();
 
 };
-
-
 
 
 #endif //LABYRINTH_TILE_H
